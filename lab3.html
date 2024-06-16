@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Traffic Light</title>
+  <style>
+    body {
+    font-family: sans-serif;
+    }
+
+    #controlPanel {
+    float: left;
+    padding-top: 30px;
+    }
+
+    .button {
+    background-color: gray;
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    margin: 90px 40px;
+    cursor: pointer;
+    }
+
+    #traffic-light {
+    height: 550px;
+    width: 200px;
+    float: left;
+    background-color: #333;
+    border-radius: 40px;
+    margin: 30px 0;
+    padding: 20px;
+    }
+
+    .bulb {
+    height: 150px;
+    width: 150px;
+    background-color: #111;
+    border-radius: 50%;
+    margin: 25px auto;
+    transition: background 500ms;
+    }
+    #lab2,#lab4{
+            width: 50px;
+            border-radius: 50%;
+        }
+        .div-btn{
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+  </style>
+</head>
+
+<body>
+  <div class="div-btn">
+    <button id="lab2">Lab2</button>
+    <button id="lab4">Lab4</button>
+  </div>
+
+
+  <div id="controlPanel">
+    <h1 id="stopButton" class="button">Stop</h1>
+    <h1 id="slowButton" class="button">Slow</h1>
+    <h1 id="goButton" class="button">Go</h1>
+  </div>
+  <div id="traffic-light">
+    <div id="stopLight" class="bulb"></div>
+    <div id="slowLight" class="bulb"></div>
+    <div id="goLight" class="bulb"></div>
+  </div>
+
+  <script>
+    let stopButton = document.getElementById('stopButton');
+    let slowButton = document.getElementById('slowButton');
+    let goButton = document.getElementById('goButton');
+
+    let stopLight = document.getElementById('stopLight');
+    let slowLight = document.getElementById('slowLight');
+    let goLight = document.getElementById('goLight');
+
+
+
+    stopButton.onclick = function(){
+        stopLight.style.backgroundColor = 'red';
+    }
+
+    slowButton.onclick = function(){
+        slowLight.style.backgroundColor = 'yellow';
+    }
+
+    goButton.onclick = function(){
+        goLight.style.backgroundColor = 'green';
+    }
+
+  
+    let lab2 = document.getElementById('lab2');
+    lab2.onclick = function(){
+        window.location.href = 'lab2.html';
+    }
+    let lab4 = document.getElementById('lab4');
+    lab4.onclick = function(){
+        window.location.href = 'lab4.html';
+    }
+
+  </script>
+</body>
+</html>

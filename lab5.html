@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            background-color: #ddd;
+            width: 50%;
+            margin-left: 200px;
+            height: 60px;
+            padding: 40px;
+        }
+        input{
+            width: 70%;
+            height: 30px;
+        }
+        button{
+            width: 20%;
+            height: 37px;
+            border: none;
+            border-radius: 4px;
+            margin-left: 20px;
+        }
+        #lab4{
+            width: 50px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <button id="lab4">Lab4</button>
+    <div>
+        <label> Bill</label>
+        <input type="number" placeholder="bill">
+        <button>Submit</button>
+    </div>
+    <div>
+        <p>Tax:</p>
+        <p>Total:</p>
+    </div>
+    
+
+    <script>
+        let bill = document.getElementsByTagName('input')[0];
+        let button = document.getElementsByTagName('button')[0];
+        let tax = document.getElementsByTagName('p')[0];
+        let total = document.getElementsByTagName('p')[1];
+
+        button.onclick = function(){
+            tax.innerHTML += +bill.value * 0.13;
+            total.innerHTML += (+bill.value) + ( +bill.value * 0.13);
+        }
+
+
+        let lab4 = document.getElementById('lab4');
+        lab4.onclick = function(){
+        window.location.href = 'lab4.html';
+    }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <style>
+        p{
+            width: 40%;
+            border-radius: 4px;
+            padding: 10px;
+        }
+        #lab2{
+            width: 50px;
+            border-radius: 50%;
+        }
+        .div-btn{
+            display: flex;
+            justify-content: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="div-btn">
+        <button id="lab2">Lab2</button>
+    </div>
+
+    <p>Sara Saeed</p>
+    <button id="change">Change Text</button>
+    <button id="increase">Font-Size-Increase</button>
+    <button id="decrease">Font-Size-Decrease</button>
+    <button id="background">Background-Color</button>
+
+
+    <script>
+        let para = document.getElementsByTagName('p')[0];
+        let change =document.getElementById('change');
+        let increase =document.getElementById('increase');
+        let decrease = document.getElementById('decrease');
+        let background = document.getElementById('background');
+
+        change.onclick = function(){
+            para.innerHTML = 'Hello World';
+        }
+        
+        increase.onclick = function(){
+            para.style.fontSize = '100px';
+        }
+
+        decrease.onclick = function(){
+            para.style.fontSize = '70px';
+        }
+        background.onclick = function(){
+            para.style.backgroundColor = 'green';
+        }
+
+        let lab2 = document.getElementById('lab2');
+        lab2.onclick = function(){
+            window.location.href = './lab2.html';
+        }
+
+    </script>
+</body>
+</html>

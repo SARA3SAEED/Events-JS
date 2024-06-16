@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Change the Channel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Stylesheets -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300" rel="stylesheet">
+
+  <style>
+    body {
+    background-color: #F5F6FA;
+    font-family: 'Raleway', sans-serif;
+    }
+
+    h1 {
+    font-size: 48px;
+    text-align: center;
+    }
+
+    .tv-picture-container {
+    margin: 50px auto;
+    width: 900px; 
+    position: relative;
+    }
+
+    .tv-show {
+    background-color: black;
+    top: 5px;
+    bottom: 77px;
+    right: 36px;
+    left: 35px;
+    overflow-x: hidden; 
+    overflow-y: hidden; 
+    position: absolute;
+    }
+
+    img {
+    max-width: 100%;
+    height: auto;
+    transition: 200ms ease-in-out;
+    }
+
+    .channels-container {
+    align-items: center;
+    background-color: #222;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 50px auto;
+    padding: 25px;
+    width: 900px;
+    }
+
+    .channels-container li {
+    background-color: #444;
+    border-radius: 28px; 
+    color: white;
+    cursor: pointer; 
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
+    height: 15px;
+    margin: 5px;
+    padding: 15px;
+    text-align: center;
+    transition: 300ms ease-in-out;
+    width: 15px;
+    }
+
+    .channels-container li:hover {
+    background-color: #666;
+    }
+    #lab1,#lab3{
+      width: 50px;
+      border-radius: 50%;
+    }
+    .div-btn{
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="div-btn">
+    <button id="lab1">Lab1</button>
+    <button id="lab3">Lab3</button>
+  </div>
+ 
+
+
+  <main class="tv">
+    <h1>Let's see what's on tonight...</h1>
+    <section class="tv-picture-container">
+      <img class="tv-frame" src="https://ga-instruction.s3.amazonaws.com/assets/front-end-web-development/fewd-conditionals-images/tv-container.png">
+      <div class="tv-show" id="screen">
+        <img src="" alt="something good to watch">
+      </div>
+    </section>
+    <ul class="channels-container">
+      <li class="channel" id="one">1</li>
+      <li class="channel" id="two">2</li>
+      <li class="channel" id="three">3</li>
+      <li class="channel" id="four">4</li>
+      <li class="channel" id="five">5</li>
+      <li class="channel" id="six">6</li>
+      <li class="channel" id="seven">7</li>
+      <li class="channel" id="eight">8</li>
+      <li class="channel" id="nine">9</li>
+    </ul>
+  </main>
+
+<script>
+    // When the user chooses one of the channel buttons, change the src attribute of the img inside the .tv-show div
+// You should write a single function to change the channel that accepts a single input, the channel number, and uses a conditional statement to change the TV to the image specific to that channel.
+// When you set up your event listeners for the buttons, the callback function should call upon that change channel function
+// Use a conditional statement to evaluate which channel they've chosen, so you can set a specific image for each channel
+// Feel free to look up and use any images of your choice and include them in your conditional statement!
+
+// Image files
+/*
+1-
+https://ga-instruction.s3.amazonaws.com/assets/front-end-web-development/fewd-conditionals-images/blue-planet.jpg
+
+2-
+https://ga-instruction.s3.amazonaws.com/assets/front-end-web-development/fewd-conditionals-images/deadpool.jpg
+
+3-
+https://ga-instruction.s3.amazonaws.com/assets/front-end-web-development/fewd-conditionals-images/gravity.jpg
+
+4-
+https://ga-instruction.s3.amazonaws.com/assets/front-end-web-development/fewd-conditionals-images/good-will-hunting.jpg
+
+5-
+https://ga-instruction.s3.amazonaws.com/assets/front-end-web-development/fewd-conditionals-images/cnn.jpg
+
+6-
+https://ga-instruction.s3.amazonaws.com/assets/front-end-web-development/fewd-conditionals-images/koyaanisqatsi.jpg
+
+7-
+https://ga-instruction.s3.amazonaws.com/assets/front-end-web-development/fewd-conditionals-images/parts-unknown.jpg
+
+8-
+https://ga-instruction.s3.amazonaws.com/assets/front-end-web-development/fewd-conditionals-images/star-wars-solo.jpeg
+
+9-
+https://ga-instruction.s3.amazonaws.com/assets/front-end-web-development/fewd-conditionals-images/stranger-things.jpg
+*/
+
+// Variables
+// 1 - get channel from the remote
+// 2 - get the screen and change in the image in there
+
+// Pseudo-code
+// Variable1, listen to it for a click
+// function() {Listener would update the image in the screen}
+
+let one = document.getElementById('one');
+let two = document.getElementById('two');
+let three = document.getElementById('three');
+let four = document.getElementById('four');
+let five = document.getElementById('five');
+let six = document.getElementById('six');
+let seven = document.getElementById('seven');
+let eight = document.getElementById('eight');
+let nine = document.getElementById('nine');
+let img = document.getElementsByTagName('img')[1];
+
+one.onclick = function (){
+    img.src ='https://ga-instruction.s3.amazonaws.com/assets/front-end-web-development/fewd-conditionals-images/blue-planet.jpg'
+}
+
+two.onclick = function (){
+    img.src ='https://ga-instruction.s3.amazonaws.com/assets/front-end-web-development/fewd-conditionals-images/deadpool.jpg'
+}
+
+three.onclick = function (){
+    img.src ='https://ga-instruction.s3.amazonaws.com/assets/front-end-web-development/fewd-conditionals-images/gravity.jpg'
+}
+
+four.onclick = function (){
+    img.src ='https://ga-instruction.s3.amazonaws.com/assets/front-end-web-development/fewd-conditionals-images/good-will-hunting.jpg'
+}
+
+five.onclick = function (){
+    img.src ='https://ga-instruction.s3.amazonaws.com/assets/front-end-web-development/fewd-conditionals-images/cnn.jpg'
+}
+
+six.onclick = function (){
+    img.src ='https://ga-instruction.s3.amazonaws.com/assets/front-end-web-development/fewd-conditionals-images/koyaanisqatsi.jpg'
+}
+
+seven.onclick = function (){
+    img.src ='https://ga-instruction.s3.amazonaws.com/assets/front-end-web-development/fewd-conditionals-images/parts-unknown.jpg'
+}
+
+eight.onclick = function (){
+    img.src ='https://ga-instruction.s3.amazonaws.com/assets/front-end-web-development/fewd-conditionals-images/star-wars-solo.jpeg'
+}
+
+nine.onclick = function (){
+    img.src ='https://ga-instruction.s3.amazonaws.com/assets/front-end-web-development/fewd-conditionals-images/stranger-things.jpg'
+}
+
+let lab3 = document.getElementById('lab3');
+lab3.onclick = function(){
+  window.location.href = 'lab3.html';
+}
+
+let lab1 = document.getElementById('lab1');
+        lab1.onclick = function(){
+            window.location.href = 'index.html';
+        }
+
+
+</script>
+</body>
+</html>

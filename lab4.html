@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Modify Div</title>
+    <style>
+        .con{
+            margin-left: 220px;
+            width: 80%;
+            border-radius: 4px;
+            padding: 10px;
+        }
+        input{
+            width: 130px;
+            height: 30px;
+        }
+        .div{
+            background-color: blue;
+            width: 30%;
+            height: 100px;
+        }
+       
+        button{
+            width: 100px;
+            height: 40px;
+        }
+        input,button{
+            margin: 10px;
+        }
+        #lab3,#lab5{
+            width: 50px;
+            border-radius: 50%;
+        }
+        .div-btn{
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="div-btn">
+    <button id="lab3">Lab3</button>
+    <button id="lab5">Lab5</button>
+    </div>
+    
+
+    <div class="con">
+        <input type="number" id="width1" placeholder="Width">
+        <input type="number" id="height1" placeholder="Height">
+        <input type="number" id="raduis1" placeholder="Radius">
+        <input type="color" id="color1">
+        <button id="submit">Submit</button>
+        <button id="Return">Return</button>
+
+    </div>
+   
+    <div id="div" ></div>
+
+
+
+    <script>
+        let div = document.getElementById("div");
+        let button = document.getElementById('submit');
+        let button1 = document.getElementById('Return');
+
+        let width1 = document.getElementById('width1');
+        let height1 = document.getElementById('height1');
+        let raduis1 = document.getElementById('raduis1');
+        let color1 = document.getElementById('color1');
+
+        button.onclick = function(){
+            div.style.width = `${width1.value}px`;
+            div.style.height = `${height1.value}px`;
+            div.style.borderRadius = `${raduis1.value}px`;
+            div.style.backgroundColor = `${color1.value}`;
+        }
+
+        button1.onclick = function(){
+            div.style.width = '30%';
+            div.style.height = '100px';
+            div.style.borderRadius = '';
+            div.style.backgroundColor = `blue`;
+        }
+
+        let lab3 = document.getElementById('lab3');
+        lab3.onclick = function(){
+        window.location.href = 'lab3.html';
+    }
+
+        let lab5 = document.getElementById('lab5');
+        lab5.onclick = function(){
+            window.location.href = 'lab5.html';
+        }
+
+    </script>
+</body>
+</html>

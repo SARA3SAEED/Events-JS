@@ -34,7 +34,7 @@
     <div>
         <label> Bill</label>
         <input type="number" placeholder="bill">
-        <button>Submit</button>
+        <button id="SUBMIT">Submit</button>
     </div>
     <div>
         <p>Tax:</p>
@@ -44,7 +44,7 @@
 
     <script>
         let bill = document.getElementsByTagName('input')[0];
-        let button = document.getElementsByTagName('button')[0];
+        let button = document.getElementById("SUBMIT");
         let tax = document.getElementsByTagName('p')[0];
         let total = document.getElementsByTagName('p')[1];
 
